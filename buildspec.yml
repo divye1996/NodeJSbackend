@@ -4,7 +4,7 @@ run-as: root
 
 env:
   parameter-store:
-    MongoDb_url= "/divye/mondodb_url"
+    MongoDb_url: "/divye/mondodb_url"
 
 phases:
   install:
