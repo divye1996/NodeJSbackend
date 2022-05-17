@@ -9,7 +9,7 @@ env:
 phases:
   build:
     commands:
-      - sed -i "s/localhost/"MongoDb_url"/" app.js
+      - sed -i "s/localhost/"$MongoDb_url"/" app.js
       - echo Building ...
 
   post_build:
