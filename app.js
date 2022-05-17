@@ -33,7 +33,7 @@ if (!isProduction) {
 if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect('MongoDb_url');
+  mongoose.connect('localhost');
   mongoose.set('debug', true);
 }
 
