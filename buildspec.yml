@@ -7,17 +7,6 @@ env:
     MongoDb_url: "/divye/mondodb_url"
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 16
-    commands:
-      - echo "Installing Nodejs"
-
-  pre_build:
-    commands:
-      - npm install
-      - echo "Installing npm dependencies"
-
   build:
     commands:
       - sed -i "s/localhost/"MongoDb_url"/" app.js
