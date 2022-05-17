@@ -11,16 +11,17 @@ phases:
     runtime-versions:
       nodejs: 16
     commands:
-      - echo "Installing Nodejs"
+      - echo Installing Nodejs
 
   pre_build:
     commands:
       - npm install
-      - echo "Installing npm dependencies"
+      - echo Installing npm dependencies
 
   build:
     commands:
       - sed -i "s/localhost/"MongoDb_url"/" app.js
+      - echo Build started on 'date'
       - echo Building ...
 
   post_build:
