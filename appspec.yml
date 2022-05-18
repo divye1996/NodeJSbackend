@@ -6,7 +6,13 @@ files:
   - source: /
     destination: /home/ubuntu/NodeJSbackend
     overwrite: true
+    timeout: 300
+
 hooks:
+  BeforeInstall:
+    - location: script/install.sh
+      timeout: 300
+      runas: root
   ApplicationStop:
     - location: scripts/stop.sh
       timeout: 300
